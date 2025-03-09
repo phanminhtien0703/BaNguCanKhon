@@ -1,0 +1,270 @@
+.gioi-thieu {
+    background: url(../images/mobile/bg-head.jpg) no-repeat center top;
+    background-size: cover;
+    padding-bottom: 15px;
+
+    @include res(1200) {
+        background: transparent;
+    }
+}
+
+.logo {
+    margin: 110px 250px 40px;
+}
+
+.slogan {
+    padding-top: 360px;
+    position: relative;
+
+    @include res(360) {
+        padding-top: 400px;
+    }
+
+    @include res(375) {
+        padding-top: 420px;
+    }
+
+    @include res(411) {
+        padding-top: 460px;
+    }
+
+    @include res(480) {
+        padding-top: 535px;
+    }
+
+    @include res(600) {
+        padding-top: 670px;
+    }
+
+    @include res(768) {
+        padding-top: 850px;
+    }
+
+    @include res(900) {
+        padding-top: 1000px;
+    }
+
+    @include res(1024) {
+        padding-top: 1140px;
+    }
+
+    @include res(1200) {
+        width: 696px;
+        padding-top: 0px;
+        text-align: right;
+        margin-left: 520px;
+    }
+
+
+
+    >img {
+        width: 90%;
+        max-width: 696px;
+
+        @include res(768) {
+            width: 100%;
+        }
+
+        @include res(1200) {
+            // width: 100%;
+        }
+    }
+
+    a {
+        position: absolute;
+        bottom: 67px;
+        right: 46px;
+
+        img {
+            width: 30px;
+            max-width: 75px;
+        }
+
+        @include res(360) {
+            bottom: 75px;
+            right: 55px;
+        }
+
+        @include res(411) {
+            bottom: 90px;
+            right: 67px;
+        }
+
+        @include res(480) {
+            bottom: 105px;
+            right: 75px;
+
+            img {
+                width: 40px;
+            }
+        }
+
+        @include res(600) {
+            bottom: 125px;
+            right: 85px;
+
+            img {
+                width: 60px;
+            }
+        }
+
+        @include res(768) {
+            bottom: 160px;
+            right: 110px;
+
+            img {
+                width: 75px;
+            }
+        }
+
+        @include res(900) {
+            bottom: 165px;
+            right: 175px;
+        }
+
+        @include res(1024) {
+            right: 235px;
+        }
+
+        @include res(1200) {
+            position: static;
+            display: block;
+            text-align: center;
+            margin-top: -45px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.tai-game {
+    width: 110px;
+    background: url(../images/mobile/btn-down.png) center top no-repeat;
+    background-size: 100%;
+    display: block;
+    margin: -5px auto 0;
+    font-size: 11px;
+    line-height: 70px;
+    text-shadow: 0px 1px 3px rgba(96, 14, 11, 0.75);
+
+    @include res(360) {
+        width: 130px;
+        height: 80px;
+        font-size: 13px;
+    }
+
+    @include res(411) {
+        margin-bottom: 10px;
+    }
+
+    @include res(480) {
+        width: 150px;
+        font-size: 16px;
+        height: 95px;
+        line-height: 95px;
+    }
+
+    @include res(600) {
+        width: 200px;
+        font-size: 20px;
+        height: 125px;
+        line-height: 125px;
+    }
+
+    @include res(768) {
+        width: 259px;
+        font-size: 26px;
+        height: 165px;
+        line-height: 165px;
+    }
+
+    @include res(900) {
+        margin-bottom: 80px;
+    }
+
+    @include res(1024) {
+        margin-bottom: 140px;
+    }
+}
+
+%btn-taigame {
+    width: 221px;
+    height: 77px;
+    display: inline-block;
+}
+
+.info-card-download {
+    width: 1079px;
+    height: 197px;
+    background: url(../images/pc/bg-napthe.png) center top no-repeat;
+    margin: 270px auto 0;
+
+    .icon-game {
+        float: left;
+        margin: 15px;
+    }
+
+    .info-taigame {
+        float: left;
+
+        p:first-child {
+            font-size: 27.5px;
+            color: #ffd486;
+            margin-top: 17px;
+        }
+
+        p:nth-child(2) {
+            font-size: 16.5px;
+            color: #ffffff;
+        }
+
+        .btn-taigame {
+            margin-top: 20px;
+
+            .chplay {
+                @extend %btn-taigame;
+                background: url(../images/pc/app-napthe.png) right top no-repeat;
+
+                &:hover {
+                    background-position: left top;
+                }
+            }
+
+            .appstore {
+                @extend %btn-taigame;
+                background: url(../images/pc/app-napthe.png) right center no-repeat;
+
+                &:hover {
+                    background-position: left center;
+                }
+            }
+
+            .pc-emulator {
+                @extend %btn-taigame;
+                background: url(../images/pc/app-napthe.png) right bottom no-repeat;
+
+                &:hover {
+                    background-position: left bottom;
+                }
+            }
+        }
+    }
+
+    .btn-napthe {
+        float: left;
+        margin: 6px 10px;
+
+        a {
+            width: 164px;
+            height: 191px;
+            background: url(../images/pc/btn-napthe.png) left top no-repeat;
+            display: block;
+
+            &:hover {
+                background-position: right top;
+            }
+        }
+    }
+}

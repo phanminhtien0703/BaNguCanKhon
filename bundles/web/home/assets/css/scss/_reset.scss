@@ -1,0 +1,388 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+@font-face {
+    font-family: 'arial';
+    src: url('../fonts/Arial_Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'tahoma';
+    src: url('../fonts/tahoma.eot');
+    src: url('../fonts/tahoma.eot?#iefix') format('eot'),
+         url('../fonts/tahoma.woff') format('woff'),
+         url('../fonts/tahoma.ttf') format('truetype'),
+         url('../fonts/tahoma.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'tahomabold';
+    src: url('../fonts/tahomabold.eot');
+    src: url('../fonts/tahomabold.eot?#iefix') format('eot'),
+         url('../fonts/tahomabold.woff') format('woff'),
+         url('../fonts/tahomabold.ttf') format('truetype'),
+         url('../fonts/tahomabold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'utm_cafeta';
+    src: url('../fonts/utm_cafeta.eot');
+    src: url('../fonts/utm_cafeta.eot?#iefix') format('eot'),
+         url('../fonts/utm_cafeta.woff') format('woff'),
+         url('../fonts/utm_cafeta.ttf') format('truetype'),
+         url('../fonts/utm_cafeta.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'umtgodswordr';
+    src: url('../fonts/umtgodswordr.eot');
+    src: url('../fonts/umtgodswordr.eot?#iefix') format('eot'),
+         url('../fonts/umtgodswordr.woff') format('woff'),
+         url('../fonts/umtgodswordr.ttf') format('truetype'),
+         url('../fonts/umtgodswordr.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'myriadpro_bold';
+    src: url('../fonts/myriadpro_bold.eot');
+    src: url('../fonts/myriadpro_bold.eot?#iefix') format('eot'),
+         url('../fonts/myriadpro_bold.woff') format('woff'),
+         url('../fonts/myriadpro_bold.ttf') format('truetype'),
+         url('../fonts/myriadpro_bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'myriadproregular';
+    src: url('../fonts/myriadproregular.eot');
+    src: url('../fonts/myriadproregular.eot?#iefix') format('eot'),
+         url('../fonts/myriadproregular.woff') format('woff'),
+         url('../fonts/myriadproregular.ttf') format('truetype'),
+         url('../fonts/myriadproregular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'font_geoslab_extra';
+    src: url('../fonts/GeoSlab703-Extra.eot');
+    src: url('../fonts/GeoSlab703-Extra.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GeoSlab703-Extra.woff') format('woff'),
+        url('../fonts/GeoSlab703-Extra.ttf') format('truetype'),
+        url('../fonts/GeoSlab703-Extra.svg#font_dax') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'font_geoslab_medium';
+    src: url('../fonts/GeoSlab703-Medium.eot');
+    src: url('../fonts/GeoSlab703-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GeoSlab703-Medium.woff') format('woff'),
+        url('../fonts/GeoSlab703-Medium.ttf') format('truetype'),
+        url('../fonts/GeoSlab703-Medium.svg#font_dax') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'font_MyriadPro';
+    src: url('../fonts/MyriadPro-Semibold.eot');
+    src: url('../fonts/MyriadPro-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MyriadPro-Semibold.woff') format('woff'),
+        url('../fonts/MyriadPro-Semibold.ttf') format('truetype'),
+        url('../fonts/MyriadPro-Semibold.svg#font_dax') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'font_RobotoRegular';
+    src: url('../fonts/RobotoCondensed-Regular.eot');
+    src: url('../fonts/RobotoCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoCondensed-Regular.woff') format('woff'),
+        url('../fonts/RobotoCondensed-Regular.ttf') format('truetype'),
+        url('../fonts/RobotoCondensed-Regular.svg#font_dax') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'font_RobotoBold';
+    src: url('../fonts/RobotoCondensed-Bold.eot');
+    src: url('../fonts/RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoCondensed-Bold.woff') format('woff'),
+        url('../fonts/RobotoCondensed-Bold.ttf') format('truetype'),
+        url('../fonts/RobotoCondensed-Bold.svg#font_dax') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'font_AleoBold';
+    src: url('../fonts/SVN-AleoBold.eot');
+    src: url('../fonts/SVN-AleoBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SVN-AleoBold.woff') format('woff'),
+        url('../fonts/SVN-AleoBold.ttf') format('truetype'),
+        url('../fonts/SVN-AleoBold.svg#font_dax') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'font_AleoItalic';
+    src: url('../fonts/SVN-AleoItalic.eot');
+    src: url('../fonts/SVN-AleoItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SVN-AleoItalic.woff') format('woff'),
+        url('../fonts/SVN-AleoItalic.ttf') format('truetype'),
+        url('../fonts/SVN-AleoItalic.svg#font_dax') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'font_AleoRegular';
+    src: url('../fonts/SVN-AleoRegular.eot');
+    src: url('../fonts/SVN-AleoRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SVN-AleoRegular.woff') format('woff'),
+        url('../fonts/SVN-AleoRegular.ttf') format('truetype'),
+        url('../fonts/SVN-AleoRegular.svg#font_dax') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'font_AleoLight';
+    src: url('../fonts/SVN-AleoLight.eot');
+    src: url('../fonts/SVN-AleoLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SVN-AleoLight.woff') format('woff'),
+        url('../fonts/SVN-AleoLight.ttf') format('truetype'),
+        url('../fonts/SVN-AleoLight.svg#font_dax') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.fgeoextra {
+    font-family: font_geoslab_extra, Helvetica, sans-serif;
+}
+.fgeomedium {
+    font-family: font_geoslab_medium, Helvetica, sans-serif;
+}
+.fmyriad {
+    font-family: font_MyriadPro, Helvetica, sans-serif;
+}
+.frobotoregular {
+    font-family: font_RobotoRegular, Helvetica, sans-serif;
+}
+.frobotobold {
+    font-family: font_RobotoBold, Helvetica, sans-serif;
+}
+.faleolight {
+    font-family: font_AleoLight, Helvetica, sans-serif;
+}
+.faleoregular {
+    font-family: font_AleoRegular, Helvetica, sans-serif;
+}
+.faleobold {
+    font-family: font_AleoBold, Helvetica, sans-serif;
+}
+.faleoitalic {
+    font-family: font_AleoItalic, Helvetica, sans-serif;
+}
+.f-tahoma {
+  font-family: 'tahoma';
+}
+.f-tahoma-bold {
+  font-family: 'tahomabold';
+}
+.f-utm_cafeta {
+  font-family: 'utm_cafeta';
+}
+.f-umtgodswordr {
+  font-family: 'umtgodswordr';
+}
+.f-myriadpro_bold {
+  font-family: 'myriadpro_bold';
+}
+.f-myriadproregular {
+  font-family: 'myriadproregular';
+}
+.f-arial {
+  font-family: 'arial', Helvetica Neue, Helvetica, sans-serif; 
+}
+
+
+/* =Reset default browser CSS.
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
+:focus {outline: 0;}
+
+ol, ul {list-style: none;}
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {font-weight: normal;text-align: left;}
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+a img{border: 0;}
+figure{margin:0}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+/* -------------------------------------------------------------- */
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:hover, a:focus, a:hover p, select:hover, select:focus, select:active{
+    text-decoration: none;
+    outline: none !important;
+}
+a, a:link,a:active{
+    text-decoration: none;
+    outline: none !important;
+    color: #fff;
+}
+
+.clearfix{
+    &:after {
+        content: "";
+        visibility: hidden;
+        display: table; 
+        clear: both;
+    }
+}
+
+*, .box_sizing_border_box {
+  box-sizing: border-box;
+}
+
+
+
+.a100 {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-responsive {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.hide{
+  display: none!important;
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);  
+}
+.box-shadow {
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+
+.txt-linear1 {
+  background-image: -webkit-gradient(linear, 50% 30%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ffff86)); 
+  // background-image: -webkit-linear-gradient(#ffffff,#ffd33c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #ffff86;
+  position: relative;
+  z-index: 1;
+  &:after {
+    background: none;
+    display: inline-block;
+    content: attr(data-text);
+    left: 0;
+    position: absolute;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55); 
+    top: 0;
+    z-index: -1;
+  }
+}
+.txt-linear2 {
+  background-image: -webkit-gradient(linear, 50% 40%, 50% 80%, color-stop(0%, #ffffff), color-stop(100%, #ffd33c)); 
+  // background-image: -webkit-linear-gradient(#ffffff,#ffd33c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  position: relative;
+}
+.txt-no-gradient {
+  position: relative;
+  &:after {
+    background: none;
+    display: inline-block;
+    content: attr(data-text);
+    left: 0;
+    position: absolute;
+    text-shadow: 3px 4px 2px rgba(255, 255, 255, 0.75); 
+    top: 0;
+    z-index: 0;
+  }
+}
+
+.txt-linear3 {
+    background-image: -webkit-gradient(linear, 50% 25%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ffff81));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fabd48;
+    position: relative;
+    &:after {
+      background: none;
+      display: inline-block;
+      content: attr(data-text);
+      left: 0;
+      position: absolute;
+      text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.65);
+      top: 5px;
+      left: -2px;
+      z-index: -1;
+    }
+}
+
+// H1
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  // line-height: 1.2;
+}
+h1, .h1 {
+  // font-size: 30px;
+  // font-family: 'tahomabold';
+  // color: $color_heading;
+}
+h2, .h2 {
+  // font-size: 20px;
+  // font-family: 'umtgodswordbold';
+  // color: $color_heading;
+}
+
+
+@keyframes rotate_circle {
+    0% {transform:rotate(  0deg);}
+    100% {transform:rotate(360deg);}
+}

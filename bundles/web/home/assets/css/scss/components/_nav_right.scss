@@ -1,0 +1,125 @@
+.nav-right {
+    width: 199px;
+    height: 576px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $bg-nav-right center top;
+    right: -200px;
+    transition: all 1s ease;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 9999;
+
+    &.open {
+        right: 20px;
+    }
+}
+
+.logo-nav-right {
+    width: 107px;
+    margin: 20px auto 25px;
+
+    &::after {
+        content: '';
+        width: 130px;
+        border-bottom: 1px dashed #e53f2b;
+        @include centerAbsolute(left);
+        top: 142px;
+    }
+}
+
+.qr-code {
+    width: 111px;
+    margin: 0 auto;
+    display: block;
+}
+
+.link-to {
+    width: 173px;
+    height: 59px;
+    background: $bg-btn-nav-right;
+    margin: 10px auto;
+    position: relative;
+
+
+    &.link-taigame {
+        background-position: right top;
+        margin-top: 20px;
+    }
+
+    &.link-giftcode {
+        background-position: left top;
+    }
+
+    &:hover {
+        background-position: center top;
+    }
+
+    a {
+        font-size: 16px;
+        color: #fffcf5;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+        line-height: 59px;
+    }
+}
+
+.btn-like {
+    margin: 20px auto 15px;
+}
+
+.btn-social {
+    margin: 0 auto;
+
+    a {
+        padding: 0 5px;
+    }
+}
+
+.arrow {
+    background: url(../images/pc/frame-arrow.png) center no-repeat;
+    width: 34px;
+    height: 106px;
+    position: absolute;
+    top: 60px;
+    right: 200px;
+    z-index: 999;
+    transition: 1s;
+
+    &.arrow-slide {
+        // right: 200px;
+    }
+
+    .pullRight {
+        width: 59px;
+        height: 45px;
+        background: url(../images/pc/icon-close-nav-right.png) center no-repeat;
+        position: absolute;
+        top: 30px;
+        left: -27px;
+        transition: 1s;
+        cursor: pointer;
+    }
+
+    .pullLeft {
+        left: 3px;
+        transform: rotate(180deg);
+        transition: 1s;
+    }
+}
+
+.go-top {
+    width: 83px;
+    height: 84px;
+    background: url(../images/pc/top.png) left top no-repeat;
+    cursor: pointer;
+    display: block;
+    margin: 6px auto;
+    font-size: 20px;
+    color: #fffcf5;
+    line-height: 84px;
+
+    &:hover {
+        background-position: right top;
+    }
+}

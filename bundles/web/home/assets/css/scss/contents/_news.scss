@@ -1,0 +1,550 @@
+body {
+    &.news-page {
+        background: #f8f1e1;
+
+        @include res(1200) {
+            background: #f4f0e0;
+        }
+
+        .about-footer {
+            background: #100908;
+            background-size: 100% 100%;
+            position: relative;
+            padding: 20px 0;
+
+            @include res(1200) {
+                // width: 1920px;
+                height: 798px;
+                background: url(../images/news/bg-footer-news.jpg) center bottom;
+                background-size: cover;
+                margin: 0;
+                padding-top: 150px;
+            }
+        }
+    }
+
+}
+
+%taigame-news {
+    width: 132px;
+    height: 46px;
+    display: inline-block;
+}
+
+.news-page {
+    .info-news-download {
+        float: left;
+        margin: 0px auto;
+
+        .icon-game {
+            width: 109px;
+            margin: 23px 0;
+        }
+
+        .info-taigame {
+            float: right;
+            margin: 23px 15px;
+
+            p:first-child {
+                font-size: 21.5px;
+                color: #ffd486;
+            }
+
+            p:nth-child(2) {
+                font-size: 14px;
+                color: #ffffff;
+                margin: -2px 0 8px;
+            }
+
+            .btn-taigame {
+                a {
+                    margin-right: 10px;
+                }
+
+                .chplay {
+                    @extend %taigame-news;
+                    background: url(../images/news/taigame-news.png) left top no-repeat;
+
+                    &:hover {
+                        background-position: right top;
+                    }
+                }
+
+                .appstore {
+                    @extend %taigame-news;
+                    background: url(../images/news/taigame-news.png) left center no-repeat;
+
+                    &:hover {
+                        background-position: right center;
+                    }
+                }
+
+                .pc-emulator {
+                    @extend %taigame-news;
+                    background: url(../images/news/taigame-news.png) left bottom no-repeat;
+
+                    &:hover {
+                        background-position: right bottom;
+                    }
+                }
+
+                .btn-napthe {
+
+                    @extend %taigame-news;
+                    background: url(../images/news/napthe.png) left top no-repeat;
+
+                    &:hover {
+                        background-position: right top;
+                    }
+                }
+            }
+        }
+    }
+
+    .box-gotop {
+        width: 114px;
+        height: 57px;
+        background: url(../images/news/top.png) center top no-repeat;
+        background-size: 100%;
+        position: relative;
+        top: -77px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        >a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 17px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.box-download-news {
+    // width: 1920px;
+    height: 156px;
+    background: url(../images/news/bg-head-news.jpg) no-repeat center top;
+
+    .download-game {
+        margin-top: 0;
+    }
+}
+
+.news {
+    min-height: 600px;
+    margin-top: 80px;
+    padding-bottom: 100px;
+
+    @include res(640) {
+        margin-top: 120px;
+    }
+
+    @include res(1200) {
+        margin-top: 0px;
+    }
+
+    .tab-link-news {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 15px;
+
+        @include res(768) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @include res(1200) {
+            margin: 100px 0 80px;
+            padding: 0px;
+        }
+
+        ul {
+            text-align: center;
+            font-size: 0;
+            border-bottom: 1px solid #cccccc;
+
+            @include res(1200) {
+                border: none;
+            }
+
+            li,
+            span {
+                display: inline-block;
+                padding: 10px;
+                // padding: 15px 3px 5px;
+                position: relative;
+                font-family: 'utm_cafeta';
+                // font-size: 13px;
+
+                @include res(375) {
+                    padding: 10px 12px;
+                }
+
+                @include res(600) {
+                    padding: 20px 20px 10px;
+                }
+
+                @include res(768) {
+                    padding: 30px 25px 20px;
+                }
+
+                @include res(1000) {
+                    padding: 20px 10px 0px;
+                }
+
+                @include res(1200) {
+                    font-family: font_geoslab_extra, Helvetica, sans-serif;
+                    color: #130a09;
+                    font-size: 25px;
+                    padding: 0 20px;
+                }
+
+                &.active {
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 4px;
+                        background: #fa701c;
+                        bottom: -1px;
+                        left: 50%;
+                        transform: translateX(-50%);
+
+                        @include res(768) {
+                            height: 7px;
+                            // bottom: -3px;
+                        }
+
+                        @include res(1000) {
+                            bottom: -3px;
+                        }
+
+                        @include res(1200) {
+                            height: 4px;
+                            bottom: -10px;
+                            background: #561f18;
+
+                        }
+                    }
+
+                    a {
+                        color: #e38242;
+
+                        @include res(1200) {
+                            color: #130a09;
+                        }
+                    }
+                }
+
+                &:hover {
+                    @include res(1200) {
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            width: 100%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 4px;
+                            bottom: -10px;
+                            background: #561f18;
+                        }
+
+                        a {
+                            color: #130a09;
+                        }
+                    }
+                }
+
+                a {
+                    color: #757575;
+                    font-size: 20px;
+
+                    @include res(360) {
+                        font-size: 24px;
+                    }
+
+                    @include res(480) {
+                        font-size: 30px;
+                    }
+
+                    @include res(768) {
+                        // font-size: 40px;
+                    }
+
+                    @include res(1000) {
+                        padding: 20px 27px;
+                    }
+
+                    @include res(1200) {
+                        font-size: 25px;
+                        color: #130a09;
+                        padding: 0;
+                    }
+                }
+            }
+
+            span {
+
+                &.active,
+                &:hover {
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.news-main {
+    @include res(1200) {
+        width: 977px;
+        margin: 0 auto;
+    }
+
+}
+
+.list-news-item {
+    .item {
+        padding: 12px 0px;
+        margin: 0px 10px;
+        border-bottom: 1px solid #bdbcba;
+
+        @include res(768) {
+            padding: 20px 0px;
+            margin: 0px 15px;
+        }
+
+        @include res(1200) {
+            border-bottom: 1px solid #0e0806;
+            padding-bottom: 40px;
+            margin: 0;
+
+            &:last-child {
+                border: none;
+            }
+        }
+
+        .thumb-new,
+        .description,
+        .date-more {
+            float: left;
+        }
+
+        .thumb-new {
+            width: 201px;
+            height: 120px;
+            // border: 1px solid #902d2b;
+            // padding: 9px;
+        }
+
+        .description {
+            width: calc(100% - 45px);
+
+            @include res(600) {
+                width: calc(100% - 100px);
+            }
+
+            @include res(1200) {
+                width: calc(100% - 310px);
+                margin: 22px 25px;
+            }
+
+            p {
+                font-size: 15px;
+
+                @include res(600) {
+                    font-size: 24px;
+                    // line-height: 1;
+                }
+
+            }
+
+            .des-cat {
+                font-family: 'tahomabold';
+                color: #6c6c6c;
+            }
+
+            .des-title {
+                a {
+                    color: #192926;
+                    width: 100%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    float: left;
+                    font-size: 15px;
+                    margin-top: 5px;
+
+                    @include res(375) {
+                        font-size: 18px;
+                    }
+
+                    @include res(411) {
+                        font-size: 21px;
+                    }
+
+                    @include res(480) {
+                        font-size: 24px;
+                    }
+
+                    @include res(600) {
+                        font-size: 27px;
+                    }
+
+                    @include res(768) {
+                        font-size: 30px;
+                    }
+
+
+                    @include res(1200) {
+                        font-size: 22px;
+                        font-family: 'tahomabold';
+                        color: #130a09;
+                        text-transform: uppercase;
+                        margin: 0;
+                        white-space: normal;
+                    }
+
+                    &:hover {
+                        color: #662314;
+                    }
+                }
+            }
+
+            .des-text {
+                .date-pc {
+                    font-size: 13px;
+                    color: #130a09;
+                }
+
+                a {
+                    font-size: 15px;
+                    color: #130a09;
+                    margin-top: 6px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+
+                }
+            }
+        }
+
+        .date-more {
+            float: right;
+            text-align: right;
+            width: 45px;
+
+            @include res(600) {
+                width: 100px;
+            }
+
+            p {
+                color: #434242;
+
+                @include res(600) {
+                    font-size: 18px;
+                    // line-height: 1.2;
+                }
+
+                @include res(768) {
+                    font-size: 24px;
+                }
+
+                &:first-child {
+                    font-family: 'tahomabold';
+
+                    @include res(600) {
+                        font-size: 30px;
+                    }
+                }
+
+                &:nth-child(3) {
+                    @include res(1000) {
+                        margin-top: 12px;
+
+                        a {
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            color: $color_white;
+                            padding: 6px 30px;
+                            background: #662314;
+
+                            &:hover {
+                                background: #fa701c;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.pagination {
+
+    margin-top: 50px;
+
+    @include res(1200) {
+        margin-top: 70px;
+    }
+
+    .prev,
+    .next {
+        background: transparent;
+        border: transparent;
+        color: #662314;
+
+        &:hover {
+            background: transparent;
+        }
+    }
+
+    ul {
+        text-align: center;
+        font-size: 0;
+
+        @include res(1000) {
+            // text-align: right;
+            margin: 0 80px;
+        }
+
+        li {
+            // width: 48px;
+            // height: 64px;
+            display: inline-block;
+            margin: 0 5px;
+
+            &.active,
+            &:hover {
+                a {
+                    background: #fa701c;
+                }
+            }
+
+            a {
+                font-size: 16px;
+                color: white;
+                border: 1px solid #b7b5b3;
+                line-height: 1;
+                padding: 5px 15px;
+                background: #662314;
+                font-family: 'tahomabold';
+
+                @include res(768) {
+                    font-size: 20px;
+                    padding: 8px 18px;
+                }
+            }
+        }
+    }
+}
+
+.space_bottom {
+    // margin-bottom: 250px;
+}

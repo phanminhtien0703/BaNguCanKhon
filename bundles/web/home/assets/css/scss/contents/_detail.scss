@@ -1,0 +1,103 @@
+.new-detail {
+
+    .title-new-detail,
+    .content-detail {
+        margin-left: 10px;
+        margin-right: 10px;
+
+        @include res(375) {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        @include res(1200) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .title-new-detail {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #cccccc;
+
+        @include res(1200) {
+            margin-top: 40px;
+        }
+
+        .title-detail {
+            margin-top: 15px;
+            font-family: 'tahomabold';
+            font-size: 20px;
+            color: #434242;
+            text-align: justify;
+
+            @include res(375) {
+                font-size: 24px;
+            }
+
+            @include res(600) {
+                font-size: 30px;
+            }
+
+            @include res(1200) {
+                float: left;
+                margin-left: 110px;
+                width: calc(100% - 190px);
+                text-align: center;
+            }
+        }
+
+        .date-detail {
+            text-align: right;
+            font-size: 18px;
+            color: #434242;
+
+            @include res(1200) {
+                float: right;
+            }
+        }
+    }
+
+    .content-detail {
+        margin-top: 25px;
+
+        .text p:last-child {
+            // float: right;
+
+            a {
+                color: blue;
+            }
+        }
+    }
+}
+
+.back-title {
+    @include res(1200) {
+        width: 60px;
+        float: left;
+        position: absolute;
+        margin-top: 22px;
+        margin-left: 30px;
+        left: 0;
+    }
+
+    a {
+        @include res(1200) {
+            font-family: 'utm_cafeta';
+            color: #070e1e;
+            font-size: 20px;
+        }
+
+        i {
+            @include res(1200) {
+                width: 20px;
+                height: 34px;
+                left: -30px;
+                top: -2px;
+                position: absolute;
+                content: '';
+                background: url(../images/icon-back.png) no-repeat right top;
+            }
+        }
+    }
+}

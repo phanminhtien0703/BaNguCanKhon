@@ -1,0 +1,272 @@
+.xxx_plus {
+    display: none!important;
+
+    @include res(1600) {
+        display: block!important;
+        position: absolute;
+        z-index: 999;
+    }
+}
+
+.header {}
+
+// Toogle
+#toggle-hambuger:checked~nav #hambuger {}
+
+#toggle-hambuger:checked~nav .navbar-content {
+    display: block;
+}
+
+.navbar {
+    background: #130a09;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+
+    @include res(600) {
+        height: 80px;
+    }
+
+    @include res(768) {
+        height: 95px;
+    }
+
+    @include res(1200) {
+        background: #130a09;
+        height: 91px;
+        position: relative;
+    }
+
+    .container {
+        padding: 0 3px;
+
+        @include res(375) {
+            padding: 0 5px;
+        }
+
+        @include res(480) {
+            padding: 0 10px;
+        }
+
+        @include res(640) {
+            padding: 0 15px;
+        }
+
+        @include res(768) {
+            padding: 0 30px;
+        }
+
+        @include res(1200) {
+            padding: 0;
+        }
+    }
+
+    .icon-hamburger {
+        float: left;
+        margin: 6px 5px;
+        width: 40px;
+        // height: 49px;
+        background: url(../images/mobile/hamburger.png) center no-repeat;
+        background-size: 100%;
+
+        @include res(600) {
+            width: 60px;
+            margin: 17px 5px;
+        }
+
+        @include res(768) {
+            width: 74px;
+            margin: 20px 0px;
+        }
+
+        #hambuger {
+            display: inline-block;
+            position: relative;
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+            z-index: 1;
+
+            @include res(600) {
+                width: 60px;
+            }
+
+            @include res(768) {
+                width: 74px;
+                height: 50px;
+            }
+        }
+    }
+
+    .navbar-content {
+        display: none;
+        position: fixed;
+        background: #f7e7d0;
+        width: 75%;
+        // height: 50%;
+        left: 0;
+        top: 55px;
+        border-bottom: 7px solid #a21815;
+
+        @include res(600) {
+            top: 75px;
+        }
+
+        @include res(768) {
+            top: 85px;
+        }
+
+        @include res(1200) {
+            display: block;
+            height: auto;
+            position: relative;
+            width: auto;
+            background: transparent;
+            top: 0px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            border: none;
+        }
+
+        ul#menu {
+            border: 1px dotted #ffffff;
+
+            @include res(1200) {
+                border: none;
+            }
+
+            li {
+                // margin-left: 10%;
+                position: relative;
+
+                &::after {
+                    width: 100%;
+                    border-bottom: 1px dashed #130a09;
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                }
+
+                @include res(1200) {
+                    float: left;
+                    text-align: center;
+                    margin-left: 0;
+                    margin: 35px 40px;
+
+                    &::after {
+                        width: 7px;
+                        height: 7px;
+                        content: '';
+                        position: absolute;
+                        background: #864d3a;
+                        transform: rotate(45deg);
+                        border: none;
+                        top: 8px;
+                        left: -45px;
+                    }
+                }
+
+                &:nth-child(9) {
+                    margin-bottom: 5px;
+
+                    &::after {
+                        border: none;
+                    }
+                }
+
+                &:first-child {
+                    margin-top: 5px;
+
+                    @include res(1200) {
+                        margin-top: 0;
+
+                        &::after {
+                            content: none;
+                        }
+                    }
+
+                    a {
+                        @include res(1200) {
+                            width: 57px;
+                            height: 85px;
+                            background: url(../images/pc/icon-home.jpg) no-repeat center center;
+                            text-indent: -99999px;
+                            display: inline-block;
+                        }
+
+                    }
+                }
+
+                a {
+                    padding: 10px 20px;
+                    color: #130a09;
+                    font-size: 15px;
+                    cursor: pointer;
+
+                    @include res(600) {
+                        padding: 15px 60px;
+                        font-size: 18px;
+                    }
+
+                    @include res(768) {
+                        padding: 20px 60px;
+                        font-size: 21px;
+                    }
+
+                    @include res(1200) {
+                        font-family: font_AleoRegular, Helvetica, sans-serif;
+                        font-size: 15px;
+                        color: #f1aa67;
+                        padding: 0;
+                        // text-transform: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.number-hotline {
+    font-size: 24px;
+    color: #757575;
+    margin-left: 30px;
+
+    i {
+        width: 14px;
+        height: 22px;
+        background: url(../images/pc/cellphone.png) no-repeat center;
+        position: absolute;
+        top: -2px;
+        right: -23px;
+    }
+}
+
+.right-nav {
+    float: right;
+
+    img {
+        width: 120px;
+        margin: 10px 5px 0 -3px;
+
+        @include res(411) {
+            margin: 10px 10px 0 -5px;
+        }
+
+        @include res(600) {
+            width: 170px;
+            margin-top: 15px;
+        }
+
+        @include res(768) {
+            width: 200px;
+            height: 59px;
+            margin: 18px 0px 0 10px;
+        }
+    }
+}

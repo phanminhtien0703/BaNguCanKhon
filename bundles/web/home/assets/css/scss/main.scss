@@ -1,0 +1,198 @@
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+html {
+    @include max_res(999) {
+        // overflow-x: hidden !important;
+    }
+
+}
+
+body {
+    margin: 0;
+    font-family: "tahoma";
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: $color_white;
+    background-color: #582119;
+    min-height: 100vh;
+    // height: 2000px;
+    overflow-x: hidden !important;
+
+    // background: $bg  #cd5c34;
+    // background-position: center top, center bottom, center center;
+    @include res(1200) {
+        background: url(../images/pc/bg-1200.jpg) no-repeat center top;
+        background-size: auto;
+    }
+
+    @include max_res(991) {}
+
+    @include max_res(768) {}
+
+    @include max_res(750) {
+        // background-position: center 60px, center bottom, center center;
+    }
+
+    @include max_res(680) {
+        // background-size: 680px auto;
+    }
+
+    @include max_res(667) {
+        // background-size: 667px auto;
+    }
+
+    @include max_res(640) {
+        // background: $m-bg;
+
+        // background-position: center 60px, center bottom, center center;
+        // background-size: 100% auto;
+    }
+
+    // @include max_res(568) {
+    //     background-size: 568px auto;
+    // }
+    // @include max_res(480) {
+    //     background-size: 480px auto;
+    // }
+    // @include max_res(414) {
+    //     background-size: 414px auto;
+    // }
+    // @include max_res(375) {
+    //     background-size: 375px auto;
+    // }
+    // @include max_res(360) {
+    //     background-size: 360px auto;
+    // }
+    // @include max_res(320) {
+    //     background-size: 320px auto;
+
+    // }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+
+    @include res(1024) {
+        width: 1024px;
+    }
+
+    @include res(1200) {
+        width: 1200px;
+    }
+}
+
+section {
+    // overflow-x: hidden;
+}
+
+.visible-mobile {
+    @include res(1200) {
+        display: none !important;
+    }
+}
+
+.visible-pc {
+    @include max_res(1200) {
+        display: none !important;
+    }
+}
+
+.title-section {
+    background: $bg-title-section center center;
+    background-size: cover;
+    height: 40px;
+    width: 100%;
+    max-width: 886px;
+    margin: 10px auto 0;
+
+    @include res(360) {}
+
+    @include res(375) {}
+
+    @include res(411) {
+        height: 45px;
+    }
+
+    @include res(480) {
+        height: 55px;
+    }
+
+    @include res(600) {
+        height: 65px;
+    }
+
+    @include res(768) {
+        height: 74px;
+    }
+
+    @include res(1200) {
+        // height: 74px;
+    }
+
+    p {
+        color: #f1513c;
+        line-height: 35px;
+        font-size: 13px;
+
+        @include res(375) {
+            font-size: 15px;
+        }
+
+        @include res(411) {
+            font-size: 16px;
+            line-height: 40px;
+        }
+
+        @include res(480) {
+            font-size: 18px;
+            line-height: 46px;
+        }
+
+        @include res(600) {
+            font-size: 20px;
+            line-height: 60px;
+        }
+
+        @include res(768) {
+            font-size: 23px;
+            line-height: 67px;
+        }
+
+        @include res(1200) {
+            font-size: 23px;
+            line-height: 70px;
+        }
+    }
+}
+
+// partials
+@import "partials/header";
+@import "partials/footer";
+
+
+// components
+@import "components/gioithieu";
+@import "components/box_new";
+@import "components/link_about";
+@import "components/tuong";
+@import "components/dacsac";
+
+// @import "components/popup_content";
+@import "components/nav_right";
+@import "components/popup_video_youtube";
+// @import "components/_link_about";
+
+
+
+// contents
+@import "contents/news";
+@import "contents/detail";
+// @import "contents/library";
+// @import "contents/tichdiem";
+
+@import "_typo.scss";
