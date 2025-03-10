@@ -85,7 +85,8 @@
                                 class="f-tahoma-bold text-upper a100">Tin tức</a></li>
                         <li class=""><a href="https://www.facebook.com/bangucankhon/"
                                 class="f-tahoma-bold text-upper a100">Sự kiện</a></li>
-                        <li class=""><a href="https://www.facebook.com/bangucankhon/" class="f-tahoma-bold text-upper a100">tính năng</a></li>
+                        <li class=""><a href="https://www.facebook.com/bangucankhon/"
+                                class="f-tahoma-bold text-upper a100">tính năng</a></li>
                         <li class=""><a href="news/huong-dan/huong-dan.html" class="f-tahoma-bold text-upper a100">Hướng
                                 dẫn</a></li>
                         <li class=""><a class="f-tahoma-bold text-upper a100" target="_blank"
@@ -111,8 +112,9 @@
                         src="bundles/web/home/assets/images/play.png" alt=""></a>
             </div>
 
-            <a target="_blank" href="https://dp3q.onelink.me/CXFv/FB"
-                class="tai-game fgeoextra text-upper text-center visible-mobile">
+            <a id="download-btn" target="_blank" href="#"
+                class="tai-game fgeoextra text-upper text-center visible-mobile"
+                onclick="event.preventDefault(); downloadGame();">
                 tải game
             </a>
 
@@ -653,8 +655,8 @@
                     <p class="rs" itemprop="hotline">Email hỗ trợ: <a href="mailto: cskh@gosu.vn" style="color: #fff">cskh@gosu.vn</a></p> -->
             <p class="rs">Thời gian: 8:00 - 22:00 các ngày (GMT+7)</p>
 
-            <img src="bundles/web/event/sinhnhat3tuoi/assets/images/eighteen.jpg" width="70"
-                height="101" class="footer-gosu-18">
+            <img src="bundles/web/event/sinhnhat3tuoi/assets/images/eighteen.jpg" width="70" height="101"
+                class="footer-gosu-18">
         </div>
     </div>
 
@@ -883,6 +885,26 @@
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-TLZG3HR');
+    </script>
+
+    <!-- Download Game Base On Operating System-->
+    <script>
+        function getDownloadLink() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                return "https://apk.gamessdk.com/game/407/202501/WZJH_version_offlineAndroid_bvhq6_20250130105156.apk";
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return "/shortLink/dwios/token/eyJ1cmwiOiJodHRwczpcL1wvYXBrLmdhbWVzc2RrLmNvbVwvZ2FtZVwvNDA4XC8yMDI1MDFcL1daSkhpb3NfMS4wLjFfb2ZmbGluZWlPU19idmhxNl8yMDI1MDEzMDEwNTExNC5pcGEiLCJidW5kbGVJZCI6ImNvbS54eGNxLnZuIiwidmVyc2lvbiI6IjEuMC4xIiwiYXBwTmFtZSI6ImJ5cWsuYXBwIiwicGFja05hbWUiOiJCXHUwMGUxIFZcdTFlZjFjIENcdTAwZTBuIEtoXHUwMGY0biJ9";
+            } else {
+                return "#";
+            }
+        }
+
+        function downloadGame() {
+            var downloadLink = getDownloadLink();
+            window.location.href = downloadLink;
+        }
     </script>
     <!-- End Google Tag Manager -->
 
