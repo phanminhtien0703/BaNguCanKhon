@@ -263,7 +263,7 @@
             <p class="rs" itemprop="hotline">Email hỗ trợ: <a href="mailto: cskh@gosu.vn" style="color: #fff">cskh@gosu.vn</a></p> -->
             <p class="rs">Thời gian: 8:00 - 22:00 các ngày (GMT+7)</p>
 
-            <img src="https://dinhphong3q.vn/bundles/web/event/sinhnhat3tuoi/assets/images/eighteen.jpg" width="70" height="101" class="footer-gosu-18">
+            <img src="../../bundles/web/event/sinhnhat3tuoi/assets/images/eighteen.jpg" width="70" height="101" class="footer-gosu-18">
         </div>
     </div>
 
@@ -354,7 +354,9 @@
         </div>
         <img src="../../bundles/web/home/assets/images/pc/qr-code.png" alt="" class="qr-code">
         <p class="link-to link-taigame ">
-            <a class="a100 fgeomedium text-upper text-center" target="_blank" href="https://dp3q.onelink.me/CXFv/FB">tải game</a>
+            <a class="a100 fgeomedium text-upper text-center" onclick="event.preventDefault(); downloadGame();"
+                target="_blank" href="#">tải
+                game</a>
         </p>
         <p class="link-to link-giftcode ">
             <a class="a100 fgeomedium text-upper text-center" href="https://www.facebook.com/messages/t/100759508131738" target="_blank">nhận giftcode</a>
@@ -480,6 +482,26 @@
             'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-TLZG3HR');
+    </script>
+    
+    <!-- Download Game Base On Operating System -->
+    <script>
+        function getDownloadLink() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                return "https://apk.gamessdk.com/game/407/202501/WZJH_version_offlineAndroid_bvhq6_20250130105156.apk";
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return "http://www.poopogame.com/shortLink/dwios/token/eyJ1cmwiOiJodHRwczpcL1wvYXBrLmdhbWVzc2RrLmNvbVwvZ2FtZVwvNDA4XC8yMDI1MDFcL1daSkhpb3NfMS4wLjFfb2ZmbGluZWlPU19idmhxNl8yMDI1MDEzMDEwNTExNC5pcGEiLCJidW5kbGVJZCI6ImNvbS54eGNxLnZuIiwidmVyc2lvbiI6IjEuMC4xIiwiYXBwTmFtZSI6ImJ5cWsuYXBwIiwicGFja05hbWUiOiJCXHUwMGUxIFZcdTFlZjFjIENcdTAwZTBuIEtoXHUwMGY0biJ9";
+            } else {
+                return "#";
+            }
+        }
+
+        function downloadGame() {
+            var downloadLink = getDownloadLink();
+            window.location.href = downloadLink;
+        }
     </script>
     <!-- End Google Tag Manager -->
 
