@@ -127,7 +127,7 @@
                             href="https://apk.gamessdk.com/game/407/202501/WZJH_version_offlineAndroid_bvhq6_20250130105156.apk"
                             class="chplay"></a>
                         <a target="_blank"
-                            href="/shortLink/dwios/token/eyJ1cmwiOiJodHRwczpcL1wvYXBrLmdhbWVzc2RrLmNvbVwvZ2FtZVwvNDA4XC8yMDI1MDFcL1daSkhpb3NfMS4wLjFfb2ZmbGluZWlPU19idmhxNl8yMDI1MDEzMDEwNTExNC5pcGEiLCJidW5kbGVJZCI6ImNvbS54eGNxLnZuIiwidmVyc2lvbiI6IjEuMC4xIiwiYXBwTmFtZSI6ImJ5cWsuYXBwIiwicGFja05hbWUiOiJCXHUwMGUxIFZcdTFlZjFjIENcdTAwZTBuIEtoXHUwMGY0biJ9"
+                            href="http://www.poopogame.com/shortLink/dwios/token/eyJ1cmwiOiJodHRwczpcL1wvYXBrLmdhbWVzc2RrLmNvbVwvZ2FtZVwvNDA4XC8yMDI1MDFcL1daSkhpb3NfMS4wLjFfb2ZmbGluZWlPU19idmhxNl8yMDI1MDEzMDEwNTExNC5pcGEiLCJidW5kbGVJZCI6ImNvbS54eGNxLnZuIiwidmVyc2lvbiI6IjEuMC4xIiwiYXBwTmFtZSI6ImJ5cWsuYXBwIiwicGFja05hbWUiOiJCXHUwMGUxIFZcdTFlZjFjIENcdTAwZTBuIEtoXHUwMGY0biJ9"
                             class="appstore"></a>
                         <a href="https://apk.gamessdk.com/game/407/202501/WZJH_version_offlineAndroid_bvhq6_20250130105156.apk"
                             class="pc-emulator"></a>
@@ -753,8 +753,9 @@
             <img src="bundles/web/home/assets/images/pc/icon-taigame.png" alt="">
         </div>
         <img src="bundles/web/home/assets/images/pc/qr-code.png" alt="" class="qr-code">
-        <p class="link-to link-taigame ">
-            <a class="a100 fgeomedium text-upper text-center" target="_blank" href="#">tải game</a>
+        <p class="link-to link-taigame">
+            <a class="a100 fgeomedium text-upper text-center" onclick="event.preventDefault(); downloadGame();" target="_blank" href="#">tải
+                game</a>
         </p>
         <p class="link-to link-giftcode ">
             <a class="a100 fgeomedium text-upper text-center" href="https://www.facebook.com/messages/t/100759508131738"
@@ -895,7 +896,7 @@
             if (/android/i.test(userAgent)) {
                 return "https://apk.gamessdk.com/game/407/202501/WZJH_version_offlineAndroid_bvhq6_20250130105156.apk";
             } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                return "/shortLink/dwios/token/eyJ1cmwiOiJodHRwczpcL1wvYXBrLmdhbWVzc2RrLmNvbVwvZ2FtZVwvNDA4XC8yMDI1MDFcL1daSkhpb3NfMS4wLjFfb2ZmbGluZWlPU19idmhxNl8yMDI1MDEzMDEwNTExNC5pcGEiLCJidW5kbGVJZCI6ImNvbS54eGNxLnZuIiwidmVyc2lvbiI6IjEuMC4xIiwiYXBwTmFtZSI6ImJ5cWsuYXBwIiwicGFja05hbWUiOiJCXHUwMGUxIFZcdTFlZjFjIENcdTAwZTBuIEtoXHUwMGY0biJ9";
+                return "http://www.poopogame.com/shortLink/dwios/token/eyJ1cmwiOiJodHRwczpcL1wvYXBrLmdhbWVzc2RrLmNvbVwvZ2FtZVwvNDA4XC8yMDI1MDFcL1daSkhpb3NfMS4wLjFfb2ZmbGluZWlPU19idmhxNl8yMDI1MDEzMDEwNTExNC5pcGEiLCJidW5kbGVJZCI6ImNvbS54eGNxLnZuIiwidmVyc2lvbiI6IjEuMC4xIiwiYXBwTmFtZSI6ImJ5cWsuYXBwIiwicGFja05hbWUiOiJCXHUwMGUxIFZcdTFlZjFjIENcdTAwZTBuIEtoXHUwMGY0biJ9";
             } else {
                 return "#";
             }
